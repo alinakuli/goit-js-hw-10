@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -10,7 +10,16 @@
   <body>
     <main>
       <!-- Loads the specified .html file -->
-      <load src="./partials/header.html" />
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a class="nav-link {=$highlight-act}" href="./1-timer.html">Timer</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {=$highlight-curr}" href="./2-snackbar.html"
+            >Snackbar</a
+          >
+        </li>
+      </ul>
     </main>
   </body>
 </html>
