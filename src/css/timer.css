@@ -1,0 +1,96 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 355px;
+    padding: 0;
+}
+
+.date-input {
+    max-width: 355px;
+    display: flex;
+    margin-bottom: 32px;
+}
+
+#datetime-picker {
+    display: flex;
+    border: 1px solid #808080;
+    border-radius: 4px;
+    width: 272px;
+    height: 40px;
+    margin-right: 8px;
+    padding: 8px 16px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.04em;
+    color: #2e2f42;
+    outline: none;
+}
+
+#datetime-picker:hover {
+    border: 1px solid #000;
+}
+
+#datetime-picker:active {
+    border: 1px solid #4e75ff;
+}
+
+#datetime-picker:disabled {
+    background-color: #fafafa;
+    color: #808080;
+    cursor: default;
+}
+
+.date-input button {
+    display: flex;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+    width: 75px;
+    height: 40px;
+    background-color: #4e75ff;;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.04em;
+    color: #fff;
+}
+
+button:hover {
+    background-color:#6c8cff;
+}
+
+button:disabled {
+    background-color: #cfcfcf;
+    color: #989898;
+    cursor: default;
+}
+
+.timer {
+    display: flex;
+    flex-direction: row;
+    max-width: 346px;
+    height: 72px;
+    font-family: 'Montserrat', sans-serif;
+    gap: 24px;
+}
+
+.field {
+    width: 82px;
+    height: 72px;
+    text-transform: uppercase;
+    align-items: center;
+}
+
+.value {
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 120%;
+    letter-spacing: 0.04em;
+    color: #2e2f42;
+}
+
+span {
+    display: block;
+}
