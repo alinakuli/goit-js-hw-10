@@ -32,7 +32,7 @@ const options = {
     console.log(selectedDates[0]);
       userSelectedDate = selectedDates[0];
       const currentDate = new Date();
-    if (selectedDates[0] < currentDate) {
+    if (selectedDates[0] <= currentDate) {
         startBtn.disabled = true;
           return iziToast.error({
             title: 'Error',
@@ -89,15 +89,15 @@ startBtn.addEventListener('click', () => {
 });
 
 function startTimer() {
-    const now = new Date();
-    const diff = userSelectedDate - now;
-
-    updateTimer(convertMs(diff));
-
-    if (diff <= 0) {
-        updateTimer(convertMs(0));
-        clearInterval(timerId);
-      datePicker.disabled = false;
-      return;
-      }
+  const now = new Date();
+  const diff = userSelectedDate - now;
+  
+  if (diff <= 0) {
+    updateTimer(convertMs(0));
+    clearInterval(timerId);
+    datePicker.disabled = false;
+    return;
+  }
+  
+  updateTimer(convertMs(diff));
 }
