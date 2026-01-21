@@ -90,14 +90,17 @@ startBtn.addEventListener('click', () => {
 
 function startTimer() {
   const now = new Date();
-  const diff = userSelectedDate - now;
+  const convertedTime = convertMs(userSelectedDate - now)
+  const timeLeft = Object.values(convertedTime).reduce((acc, current) => {
+  return acc + current;
+  }, 0);
   
-  if (diff <= 0) {
-    updateTimer(convertMs(0));
+  updateTimer(convertedTime);
+
+  if (timeLeft <= 0) {
     clearInterval(timerId);
     datePicker.disabled = false;
     return;
   }
-  
-  updateTimer(convertMs(diff));
+
 }
