@@ -4,6 +4,7 @@
     flex-wrap: wrap;
     max-width: 355px;
     padding: 0;
+  background-color: black;
 }
 
 .date-input {
